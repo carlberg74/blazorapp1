@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Distributions\web.config" />
+      <_ContentIncludedByDefault Remove="Distributions\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="Distributions\appsettings.json" />
+      <_ContentIncludedByDefault Remove="Distributions\BlazorApp1.deps.json" />
+      <_ContentIncludedByDefault Remove="Distributions\BlazorApp1.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="Distributions\ecs-infra.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Distributions\" />
+    </ItemGroup>
+
+</Project>
